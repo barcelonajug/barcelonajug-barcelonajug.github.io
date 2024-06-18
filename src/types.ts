@@ -1,13 +1,9 @@
-export interface CompatibilityItem {
-  icon: string;
-  title: string;
-  url: string;
-}
 
-export interface FeatureItem {
-  description: string;
+export interface CommunityItem {
+  url: string;
   icon: string;
   title: string;
+  description: string;
 }
 
 export interface FooterLink {
