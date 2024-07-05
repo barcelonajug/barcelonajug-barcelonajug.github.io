@@ -1,4 +1,3 @@
-
 export interface CommunityItem {
   url: string;
   icon: string;

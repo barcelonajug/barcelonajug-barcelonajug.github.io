@@ -28,7 +28,7 @@ const links: Array<FooterLink> = [
     url: "https://www.youtube.com/user/BarcelonaJUG",
     description: "Youtube",
     icon: "fa-brands:youtube",
-  }
+  },
 ];
 ---
 
@@ -36,7 +36,7 @@ const links: Array<FooterLink> = [
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
-  <ul class="relative grid grid-flow-col auto-cols-max">
+  <ul class="relative grid auto-cols-max grid-flow-col">
     {
       links.map((link) => (
         <li>

@@ -1,6 +1,5 @@
 # Barcelona Java User Group
 
-
 ## Commands
 
 | Command                | Action                                            |
