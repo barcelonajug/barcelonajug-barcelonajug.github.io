@@ -1,70 +1,60 @@
 ---
 import type {CommunityItem} from "../types";
-import { Icon } from "astro-icon/components";
+import {Icon} from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 
 const communities: Array<CommunityItem> = [
-  {
-    url: "http://bit.ly/slack-bcnjug",
-    title: "Slack",
-    description: "Join our Slack channel to talk with us!",
-    icon: "fa-brands:slack",
-  },
-  {
-    url: "http://www.meetup.com/BarcelonaJUG/",
-    title: "Meetup",
-    description: "Join our Meetup group to know about our events",
-    icon: "fa-brands:meetup",
-  },
-  {
-    url: "http://twitter.com/BarcelonaJUG",
-    title: "Twitter",
-    description: "Follow us on Twitter to know about the latest updates",
-    icon: "fa-brands:twitter",
-  },
-  {
-    url: "http://bit.ly/BCNjug",
-    title: "Linkedin",
-    description: "Add us to Linkedin to know about the latest updates",
-    icon: "fa-brands:linkedin",
-  },
-  {
-    url: "https://www.youtube.com/user/BarcelonaJUG",
-    title: "Youtube",
-    description: "See all recordings of talks in our Youtube channel",
-    icon: "fa-brands:youtube",
-  },
-  {
-    url: "http://bit.ly/BarcelonaJUG",
-    title: "Google Group",
-    description: "Join our Google Group to receive updates",
-    icon: "fa-brands:google",
-  },
-  {
-    url: "https://www.facebook.com/BarcelonaJUG",
-    title: "Facebook",
-    description: "Follow us on Facebook to know about the latest updates",
-    icon: "fa-brands:facebook",
-  },
+    {
+        url: "https://bit.ly/slack-bcnjug",
+        title: "Slack",
+        description: "Join our Slack channel to talk with us!",
+        icon: "fa-brands:slack",
+    },
+    {
+        url: "https://www.meetup.com/BarcelonaJUG/",
+        title: "Meetup",
+        description: "Join our Meetup group to know about our events",
+        icon: "fa-brands:meetup",
+    },
+    {
+        url: "https://twitter.com/BarcelonaJUG",
+        title: "Twitter",
+        description: "Follow us on Twitter to know about the latest updates",
+        icon: "fa-brands:twitter",
+    },
+    {
+        url: "https://www.linkedin.com/company/barcelonajug",
+        title: "Linkedin",
+        description: "Add us to Linkedin to know about the latest updates",
+        icon: "fa-brands:linkedin",
+    },
+    {
+        url: "https://www.youtube.com/user/BarcelonaJUG",
+        title: "Youtube",
+        description: "See all recordings of talks in our Youtube channel",
+        icon: "fa-brands:youtube",
+    },
 ];
 ---
 
 <ContentSection title="Community" id="community">
-  <Fragment slot="lead">
-    Join our <span class="text-primary">community</span>.
-  </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {
-      communities.map(({ title, url, icon, description }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="size-16 rounded-full border-2 border-current p-3">
-            <Icon name={icon} class="size-full" />
-          </div>
+    <Fragment slot="lead">
+        Join our <span class="text-primary">community</span>.
+    </Fragment>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {
+            communities.map(({title, url, icon, description}) => (
+                    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                        <div class="size-16 rounded-full border-2 border-current p-3">
+                            <Icon name={icon} class="size-full"/>
+                        </div>
 
-          <a href={url} class="text-center font-extrabold text-xl">{title}</a>
-          <a href={url} class="text-center text-offset text-sm">{description}</a>
-        </li>
-      ))
-    }
-  </ul>
+                        <a href={url}
+                           class="text-center font-extrabold text-xl">{title}</a>
+                        <a href={url}
+                           class="text-center text-offset text-sm">{description}</a>
+                    </li>
+            ))
+        }
+    </ul>
 </ContentSection>
