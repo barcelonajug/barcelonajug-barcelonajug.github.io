@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
+import {Image} from "astro:assets";
+import logoImage from "~/assets/logo_small.png";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
@@ -8,6 +10,8 @@ const navItems: Array<NavItem> = [
   { title: "Community", url: "#community" },
   { title: "Contribute", url: "#contribute" },
 ];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+const widths = [450, 800];
 ---
 
 <header
@@ -57,7 +61,14 @@ const navItems: Array<NavItem> = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logo_small" class="size-16" />
+            <Image
+                class="size-16"
+                src={logoImage}
+                widths={widths}
+                sizes={sizes}
+                loading="eager"
+                alt="Barcelona Java User Group Logo"
+            />
           </div>
           <nav>
             <ul class="flex flex-col">

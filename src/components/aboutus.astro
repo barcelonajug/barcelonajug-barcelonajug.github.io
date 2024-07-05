@@ -1,10 +1,21 @@
 ---
 import {Icon} from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
+import {Image} from "astro:assets";
+import logoImage from "~/assets/logo_small.png";
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <ContentSection title="About Us" id="aboutus">
-    <Icon slot="eyebrow" name="logo_small" class="size-32"/>
+    <Image slot="eyebrow"
+           class="size-32"
+           src={logoImage}
+           widths={widths}
+           sizes={sizes}
+           loading="eager"
+           alt="Barcelona Java User Group Logo"
+    />
     <Fragment slot="lead">
         <p>We're a group of geeks from the condal city who want to share
             experiences and knowledge related to the IT world and this
