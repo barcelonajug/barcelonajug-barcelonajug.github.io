@@ -10,7 +10,7 @@ jobs:
           node-version: 22.x
       - run: npm ci
       - run: npm run build --if-present
-      - name: Run Lighthouse against a static dist dir
+      - name: Run Lighthouse against a static dist dir.
         uses: treosh/lighthouse-ci-action@v11
         with:
           configPath: "./lighthouserc.json"
