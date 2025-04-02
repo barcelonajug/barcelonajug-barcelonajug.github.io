@@ -7,6 +7,7 @@ import AboutUs from "~/components/aboutus.astro";
 import Splash from "~/components/splash.astro";
 import Contribute from "../components/contribute.astro";
 import "~/styles/index.css";
+import Events from "../components/events.astro";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -63,6 +64,7 @@ const description = "Group of Java's users in Barcelona .";
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <Community />
+      <Events/>
       <AboutUs />
       <Contribute />
     </div>
